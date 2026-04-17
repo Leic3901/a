@@ -1,19 +1,17 @@
 scoreboard players set #intRGBA RGBA 0
 
-
-
 scoreboard players operation #intB RGBA = #B RGBA 
-scoreboard players operation #0x_B_0 RGBA = #intB RGBA
-scoreboard players operation #0x_B_1 RGBA = #intB RGBA
+scoreboard players operation #0x_0 RGBA = #intB RGBA
+scoreboard players operation #0x_1 RGBA = #intB RGBA
 
 scoreboard players operation #intG RGBA = #G RGBA
-scoreboard players operation #0x_B_2 RGBA = #intG RGBA
-scoreboard players operation #0x_B_3 RGBA = #intG RGBA
+scoreboard players operation #0x_2 RGBA = #intG RGBA
+scoreboard players operation #0x_3 RGBA = #intG RGBA
 scoreboard players operation #intG RGBA *= #2^8 math
 
 scoreboard players operation #intR RGBA = #R RGBA
-scoreboard players operation #0x_B_4 RGBA = #intR RGBA
-scoreboard players operation #0x_B_5 RGBA = #intR RGBA
+scoreboard players operation #0x_4 RGBA = #intR RGBA
+scoreboard players operation #0x_5 RGBA = #intR RGBA
 scoreboard players operation #intR RGBA *= #2^16 math
 
 scoreboard players operation #intA RGBA = #A RGBA
@@ -29,39 +27,39 @@ scoreboard players operation #intRGBA RGBA += #intA RGBA
 # execute if score #intRGBA RGBA matches ..0 run scoreboard players add #intRGBA RGBA
 
 ##位运算
-# scoreboard players operation #0x_B_0 RGBA = #intB RGBA
-# scoreboard players operation #0x_B_1 RGBA = #intB RGBA
+# scoreboard players operation #0x_0 RGBA = #intB RGBA
+# scoreboard players operation #0x_1 RGBA = #intB RGBA
 
-# scoreboard players operation #0x_B_2 RGBA = #intG RGBA
-# scoreboard players operation #0x_B_3 RGBA = #intG RGBA
+# scoreboard players operation #0x_2 RGBA = #intG RGBA
+# scoreboard players operation #0x_3 RGBA = #intG RGBA
 
-# scoreboard players operation #0x_B_4 RGBA = #intR RGBA
-# scoreboard players operation #0x_B_5 RGBA = #intR RGBA
+# scoreboard players operation #0x_4 RGBA = #intR RGBA
+# scoreboard players operation #0x_5 RGBA = #intR RGBA
 
-# scoreboard players operation #0x_B_6 RGBA = #intA RGBA
-# scoreboard players operation #0x_B_7 RGBA = #intA RGBA
+# scoreboard players operation #0x_6 RGBA = #intA RGBA
+# scoreboard players operation #0x_7 RGBA = #intA RGBA
 
-scoreboard players operation #0x_B_0 RGBA %= #2^4 math
-scoreboard players operation #0x_B_1 RGBA /= #2^4 math
-
-
-scoreboard players operation #0x_B_2 RGBA %= #2^4 math
-scoreboard players operation #0x_B_3 RGBA /= #2^4 math
+scoreboard players operation #0x_0 RGBA %= #2^4 math
+scoreboard players operation #0x_1 RGBA /= #2^4 math
 
 
-scoreboard players operation #0x_B_4 RGBA %= #2^4 math
-scoreboard players operation #0x_B_5 RGBA /= #2^4 math
-
-scoreboard players get #0x_B_0 RGBA
-scoreboard players get #0x_B_1 RGBA
-scoreboard players get #0x_B_2 RGBA
-scoreboard players get #0x_B_3 RGBA
-scoreboard players get #0x_B_4 RGBA
-scoreboard players get #0x_B_5 RGBA
+scoreboard players operation #0x_2 RGBA %= #2^4 math
+scoreboard players operation #0x_3 RGBA /= #2^4 math
 
 
-# scoreboard players operation #0x_B_6 RGBA %= #2^28 math
-# scoreboard players operation #0x_B_7 RGBA /= #2^28 math
+scoreboard players operation #0x_4 RGBA %= #2^4 math
+scoreboard players operation #0x_5 RGBA /= #2^4 math
+
+scoreboard players get #0x_0 RGBA
+scoreboard players get #0x_1 RGBA
+scoreboard players get #0x_2 RGBA
+scoreboard players get #0x_3 RGBA
+scoreboard players get #0x_4 RGBA
+scoreboard players get #0x_5 RGBA
+
+
+# scoreboard players operation #0x_6 RGBA %= #2^28 math
+# scoreboard players operation #0x_7 RGBA /= #2^28 math
 
 
 data modify storage minecraft:rgba index set value {index:5}
