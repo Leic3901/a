@@ -1,7 +1,7 @@
 function ui:a/scoreboard
 function ui:a/random
-function ui:a/macro
-function ui:a/idk with storage minecraft:rgba
+function ui:a/rgb_to_intrgb
+# function ui:a/idk with storage minecraft:rgba
 
 
 

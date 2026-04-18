@@ -5,6 +5,11 @@ scoreboard players set #B RGBA 0
 scoreboard players set #A RGBA 0
 scoreboard players set #index RGBA 5
 
+scoreboard objectives add HSV dummy
+scoreboard players set #H HSV 0
+scoreboard players set #S HSV 0
+scoreboard players add #V HSV 0
+
 scoreboard objectives add math dummy
 scoreboard players set #2^24 math 16777216
 scoreboard players set #2^20 math 1048576
@@ -12,6 +17,9 @@ scoreboard players set #2^16 math 65536
 scoreboard players set #2^12 math 4096
 scoreboard players set #2^8 math 256
 scoreboard players set #2^4 math 16
+scoreboard players set #1000 math 1000
+scoreboard players set #255 math 255
+scoreboard players set #60 math 60
 scoreboard players set #16 math 16
 scoreboard players set #15 math 15
 scoreboard players set #14 math 14
