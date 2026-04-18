@@ -31,3 +31,5 @@ function ui:a/rgb_to_intrgb
 # int(gb) % 2^8 = int g
 
 # int(b) % 2 = int b
+
+tellraw leic3901 {text:"",extra:[{storage:"minecraft:rgba",nbt:""}]}

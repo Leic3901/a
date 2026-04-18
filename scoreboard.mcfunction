@@ -17,8 +17,11 @@ scoreboard players set #2^16 math 65536
 scoreboard players set #2^12 math 4096
 scoreboard players set #2^8 math 256
 scoreboard players set #2^4 math 16
+scoreboard players set #10000 math 10000
 scoreboard players set #1000 math 1000
+scoreboard players set #600 math 600
 scoreboard players set #255 math 255
+scoreboard players set #100 math 100
 scoreboard players set #60 math 60
 scoreboard players set #16 math 16
 scoreboard players set #15 math 15

@@ -1,7 +1,7 @@
 # execute store result score #H HSV run random value 0..359
 # execute store result score #S HSV run random value 0..1000
 # execute store result score #V HSV run random value 0..1000
-
+# execute store result score #A RGBA run random value 60..150
 #C=V*S/1000   m=V-C
 #sector = H/60  f= H%60
 #X=C*min(f,60-f)/60
@@ -30,12 +30,15 @@ scoreboard players operation #sector HSV /= #60 math
 scoreboard players operation #f HSV = #H HSV 
 scoreboard players operation #f HSV %= #60 math 
 
-#min(f,60-f)
+# #min(f,60-f)
 scoreboard players operation #60_minus_f HSV = #60 math
 scoreboard players operation #60_minus_f HSV -= #f HSV
+scoreboard players set #min_f_60-f HSV 0
+# execute if score #60_minus_f HSV <= #f HSV run scoreboard players operation #min_f_60-f HSV = #60_minus_f HSV
+# execute if score #60_minus_f HSV > #f HSV run scoreboard players operation #min_f_60-f HSV = #f HSV
+scoreboard players operation #min_f_60-f HSV = #f HSV
+execute if score #60_minus_f HSV < #f HSV run scoreboard players operation #min_f_60-f HSV = #60_minus_f HSV
 
-execute if score #60_minus_f HSV <= #f HSV run scoreboard players operation #min_f_60-f HSV = #60_minus_f HSV
-execute if score #60_minus_f HSV > #f HSV run scoreboard players operation #min_f_60-f HSV = #f HSV
 
 #X
 scoreboard players operation #X HSV = #C HSV

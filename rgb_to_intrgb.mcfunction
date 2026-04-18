@@ -66,7 +66,8 @@ execute store result storage minecraft:rgba HEX.intRGBA int 1 run scoreboard pla
 
 #生成粒子
 function ui:a/particle with storage minecraft:rgba HEX
-
+# execute unless score #H HSV matches 359.. run schedule function ui:a/hsv_to_rgb 1t append
+schedule function ui:a/hsv_to_rgb 1t append
 
 
 
