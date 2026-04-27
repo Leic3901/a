@@ -1,35 +1,11 @@
-function ui:a/scoreboard
-function ui:a/random
-function ui:a/rgb_to_intrgb
-# function ui:a/idk with storage minecraft:rgba
+
+execute store result storage minecraft:test x int 1 run scoreboard players get #2 math
 
 
+$tell @a $(x)
+
+summon text_display ~ ~ ~ {data:{x:1,y:2}}
 
 
-
-
-# summon text_display ~ ~ ~ {text:{text:a,color:"red",shadow_color:]},background:false}
-
-# data get entity @e[type=text_display,limit=1,sort=nearest] text.color
-# execute store result storage minecraft:color color int 1 run data get entity @e[type=text_display,limit=1,sort=nearest] text.color
-
-
-
-
-# 2*(b)+2^8(g)+2^16(r)+2^24(a)=int(rgba)
-
-
-
-
-
-# if int rgba <= 0 run int(rgba)=-int(rgba)
-
-# int(rgba) % 2^24 = int(rgb)
-
-# int(rgb) % 2^16 = int gb
-
-# int(gb) % 2^8 = int g
-
-# int(b) % 2 = int b
-
-tellraw leic3901 {text:"",extra:[{storage:"minecraft:rgba",nbt:""}]}
+execute if data entity @s {data:{x:1,y:2}} run summon 
+modify entity @e[type=marker,tag=temp,limit=1] data set from storage minecraft:pixelart pixel[{x:0,y:0}]

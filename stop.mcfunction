@@ -1,2 +1,3 @@
-schedule clear ui:a/main
-schedule clear ui:a/hsv_to_rgb
+schedule clear ui:display/color_convert/main
+schedule clear ui:display/color_convert/hsv_to_rgb
+function ui:display/rmscoreboard

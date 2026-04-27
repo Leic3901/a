@@ -44,30 +44,30 @@ scoreboard players operation #0x_5 RGBA /= #2^4 math
 
 #转为hex
 data modify storage minecraft:rgba index set value {index:5}
-function ui:a/bitwise with storage minecraft:rgba index
+function ui:display/color_convert/bitwise with storage minecraft:rgba index
 
 data modify storage minecraft:rgba index set value {index:4}
-function ui:a/bitwise with storage minecraft:rgba index
+function ui:display/color_convert/bitwise with storage minecraft:rgba index
 
 data modify storage minecraft:rgba index set value {index:3}
-function ui:a/bitwise with storage minecraft:rgba index
+function ui:display/color_convert/bitwise with storage minecraft:rgba index
 
 data modify storage minecraft:rgba index set value {index:2}
-function ui:a/bitwise with storage minecraft:rgba index
+function ui:display/color_convert/bitwise with storage minecraft:rgba index
 
 data modify storage minecraft:rgba index set value {index:1}
-function ui:a/bitwise with storage minecraft:rgba index
+function ui:display/color_convert/bitwise with storage minecraft:rgba index
 
 data modify storage minecraft:rgba index set value {index:0}
-function ui:a/bitwise with storage minecraft:rgba index
+function ui:display/color_convert/bitwise with storage minecraft:rgba index
 
 #intrgba 存入storage
 execute store result storage minecraft:rgba HEX.intRGBA int 1 run scoreboard players get #intRGBA RGBA
 
 #生成粒子
-function ui:a/particle with storage minecraft:rgba HEX
-execute unless score #H HSV matches 359.. run schedule function ui:a/hsv_to_rgb 1t append
-# execute unless score #S HSV matches ..0 run schedule function ui:a/hsv_to_rgb 1t append
+function ui:display/color_convert/particle with storage minecraft:rgba HEX
+execute unless score #H HSV matches 359.. run schedule function ui:display/color_convert/hsv_to_rgb 1t append
+# execute unless score #S HSV matches ..0 run schedule function ui:display/color_convert/hsv_to_rgb 1t append
  
 
 

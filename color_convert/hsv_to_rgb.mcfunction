@@ -120,7 +120,7 @@ scoreboard players operation #B_temp HSV *= #255 math
 scoreboard players operation #B_temp HSV /= #1000 math
 scoreboard players operation #B RGBA = #B_temp HSV
 
-function ui:a/rgb_to_intrgb
+function ui:display/color_convert/rgb_to_intrgb
 
 execute store result storage minecraft:rgba HSV.H int 1 run scoreboard players get #H HSV
 execute store result storage minecraft:rgba HSV.S int 1 run scoreboard players get #S HSV

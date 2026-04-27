@@ -15,4 +15,4 @@ execute store result score #B RGBA run random value 0..255
 
 
 
-function ui:a/rgb_to_intrgb
+function ui:display/color_convert/rgb_to_intrgb
