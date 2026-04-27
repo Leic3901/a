@@ -44,3 +44,6 @@ scoreboard players set #1 math 1
 
 data modify storage minecraft:rgba index set value 5
 
+
+
+scoreboard objectives add pixel dummy

@@ -1,15 +1,12 @@
-# execute store result score #H HSV run random value 0..359
-# execute store result score #S HSV run random value 0..1000
-# execute store result score #V HSV run random value 0..1000
-# execute store result score #A RGBA run random value 60..150
+###############################################
 
-##hue 360
-##S 1000
-##V 1000
+#hue 360
+#S 1000
+#V 1000
 #C=V*S   m=(V-C)
 #sector = H/60  f= H%60
 
-#X=C*(1-|(H/60)mod2 -1|)
+#X=C*(1-|(H/60)mod2 -1|)  手动分段
 #sector 0 = C X 0
 #       1 = X C 0
 #       2 = 0 C X
@@ -18,9 +15,11 @@
 #       5 = C 0 X
 # R=(R'+m)*255
 
+################################################
 scoreboard players set #m HSV 0
 scoreboard players set #X HSV 0
 scoreboard players set #C HSV 0
+
 #C  扩大1000,000
 scoreboard players operation #C HSV = #V HSV
 scoreboard players operation #C HSV *= #S HSV
@@ -64,6 +63,8 @@ scoreboard players operation #X HSV *= #f HSV
 scoreboard players operation #X HSV /= #60 math
 
 
+
+##缩放为正常rgb值
 scoreboard players operation #C HSV /= #1000 math
 scoreboard players operation #X HSV /= #1000 math
 
