@@ -8,7 +8,9 @@ schedule function ui:display/pixelart/x_main 1t replace
 
 execute if score #x_pos pixel >= #x_pos_max pixel run schedule clear ui:display/pixelart/x_main
 
-execute if score #x_pos pixel = #x_pos_max pixel run kill @e[type=marker,tag=coord_y]
+
+
+execute if score #x_pos pixel = #x_pos_max pixel run kill @e[type=armor_stand,tag=coord_y]
 scoreboard players add #x_pos pixel 1
 
 

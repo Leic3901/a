@@ -1,4 +1,4 @@
-execute at @e[tag=tester] unless score #y_pos pixel = #y_pos_max pixel run function ui:display/pixelart/coordination_y with storage minecraft:draw_pos
+execute as @e[type=marker,tag=y_max,limit=1] at @s unless score #y_pos pixel = #y_pos_max pixel run function ui:display/pixelart/coordination_y with storage minecraft:draw_pos
 
 
 
