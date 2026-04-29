@@ -47,3 +47,7 @@ data modify storage minecraft:rgba index set value 5
 
 
 scoreboard objectives add pixel dummy
+scoreboard objectives add x_coord dummy
+scoreboard objectives add y_coord dummy
+scoreboard objectives add index_temp dummy
+scoreboard objectives add index dummy

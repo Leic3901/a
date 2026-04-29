@@ -1,4 +1,7 @@
-execute as @e[type=marker,tag=coord_y] at @s if score #scan pixel matches 1 run function ui:display/pixelart/coordination_x with storage minecraft:draw_pos
+# execute as @e[type=marker,tag=coord_y] at @s if score #scan pixel matches 1 run function ui:display/pixelart/coordination_x with storage minecraft:draw_pos
+
+execute as @e[type=armor_stand,tag=coord_y] at @s if score #scan pixel matches 1 run function ui:display/pixelart/coordination_x with storage minecraft:draw_pos
+
 
 
 schedule function ui:display/pixelart/x_main 1t replace
