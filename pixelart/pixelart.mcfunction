@@ -2,7 +2,7 @@
 
 #(tp_max不精准也可以，只影响图片位置)
 
-data merge storage draw_pos {tp:0.125,tp_max:30}
+data merge storage draw_pos {tp:0.125,tp_max:4}
 
 
 #######################
