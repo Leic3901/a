@@ -1,6 +1,11 @@
-##需要更改的部分
+##需要更改的部分#######
+
+#(tp_max不精准也可以，只影响图片位置)
+
 data merge storage draw_pos {tp:0.125,tp_max:30}
-##
+
+
+#######################
 
 
 
@@ -17,10 +22,14 @@ execute store result storage minecraft:draw_pos prs_y int 1 run scoreboard playe
 
 
 
-# execute at @e[tag=tester] run function ui:display/pixelart/themax_y with storage minecraft:pixelart map
 
 execute at @e[tag=tester] run function ui:display/pixelart/themax_y with storage draw_pos
 
+
+
+
+
+# execute at @e[tag=tester] run function ui:display/pixelart/themax_y with storage minecraft:pixelart map
 
 # execute unless score #y_pos pixel = #y_pos_max pixel run function ui:display/pixelart/coordination_x with storage draw_pos
 

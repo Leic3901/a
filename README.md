@@ -8,7 +8,7 @@ pixel art使用方法：
 
 1.tag一个实体为tester
 
-2.图片命名为input.png,用脚本将图片转为一位数组,会生成一个  the_storage.mcfunction
+2.将图片命名为input.png放入pixelart目录,运行main.py(需要PIL库)将图片转为一位数组,会生成一个  the_storage.mcfunction
 
 3.根据需要的缩放程度，手动更改  particle.mcfunction中的scale
 
@@ -19,3 +19,5 @@ pixel art使用方法：
 
 
 ## 可以试着运行template_1看看效果
+
+6.删除所有实体：kill @e[tag=pixel_art]
